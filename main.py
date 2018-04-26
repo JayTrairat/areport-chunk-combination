@@ -8,7 +8,7 @@ def main():
     for index in range(1, 28):
         with open('assets/naming_elements/important_word_pos_' + str(index) + '.txt', 'r', encoding='utf8') as source:
             contents = [content.strip().split('|') for content in source.readlines()]
-            contents = [content[:5] for content in contents]
+            contents = [content[:] for content in contents]
             for content in contents:
                 for item in content:
                     word_list.append(item)
